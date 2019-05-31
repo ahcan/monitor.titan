@@ -1,0 +1,28 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters":{ 
+        "titan": {
+            "format": "date: %(asctime)s - %(name)s - serverity: %(levelname)s - message: %(message)s"
+        }
+    },
+    "handlers": {
+        "titan_handler": {
+            "filename": "log/titan.log",
+            "encoding": "utf8",
+            "delay": false,
+            "class": "logging.FileHandler",
+            "level": "DEBUG"
+        }
+    },
+    "root": {
+        "level": "INFO",
+        "handlers": []
+    },
+    "loggers": {
+        "titan": {
+            "handlers": ["titan_handler"],
+            "level": "DEBUG"
+        }
+    }
+}
